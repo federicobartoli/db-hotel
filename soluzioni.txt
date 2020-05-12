@@ -5,4 +5,4 @@
 5. SELECT SUM(`price`) AS CICCIO FROM `pagamenti` WHERE `status` = 'accepted';
 6. SELECT * FROM `pagamenti` WHERE `status` = 'accepted' ORDER BY `price` DESC;
 7. SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND `date_of_birth` LIKE '1975%';
-8. SELECT COUNT(room_number) AS CICCIO FROM `stanze` ;
+8. SELECT SUM(beds) AS CICCIO FROM `stanze`;
