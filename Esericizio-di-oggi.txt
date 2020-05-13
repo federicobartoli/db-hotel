@@ -1,0 +1,34 @@
+1 . SELECT * FROM `ospiti` WHERE `document_type` = 'CI';
+2 . SELECT * FROM `ospiti` WHERE `date_of_birth` >= '1988';
+3. SELECT * FROM `ospiti` WHERE `date_of_birth` <= '2000-05-12';
+4. SELECT * FROM `ospiti` WHERE `name` LIKE 'D%';
+5. SELECT SUM(`price`) AS CICCIO FROM `pagamenti` WHERE `status` = 'accepted';
+6. SELECT * FROM `pagamenti` WHERE `status` = 'accepted' ORDER BY `price` DESC;
+7. SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND `date_of_birth` LIKE '1975%';
+8. SELECT SUM(beds) AS CICCIO FROM `stanze`;
+
+GROUP BY
+
+
+
+Conta gli ospiti raggruppandoli per anno di nascita
+
+9. SELECT COUNT(`id`) AS 'query', YEAR(`date_of_birth`) FROM `ospiti`
+GROUP BY YEAR(`date_of_birth`); 
+
+
+Somma i prezzi dei pagamenti raggruppandoli per status
+
+10. SELECT SUM(`price`) AS 'sum', `status` FROM `pagamenti`
+GROUP BY (`status`);
+
+
+Conta quante volte è stata prenotata ogni stanza
+
+11. SELECT COUNT(`stanza_id`) AS 'total_bookings', `stanza_id` FROM `prenotazioni`
+GROUP BY (`stanza_id`);
+
+
+Fai una analisi per vedere se ci sono ore in cui le prenotazioni sono più frequenti
+
+12.
