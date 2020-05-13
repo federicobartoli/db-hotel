@@ -6,3 +6,29 @@
 6. SELECT * FROM `pagamenti` WHERE `status` = 'accepted' ORDER BY `price` DESC;
 7. SELECT * FROM `ospiti` WHERE `document_type` = 'Driver License' AND `date_of_birth` LIKE '1975%';
 8. SELECT SUM(beds) AS CICCIO FROM `stanze`;
+
+GROUP BY
+
+
+
+Conta gli ospiti raggruppandoli per anno di nascita
+
+9. SELECT COUNT(`id`) AS 'query', YEAR(`date_of_birth`) FROM `ospiti`
+GROUP BY YEAR(`date_of_birth`); 
+
+
+Somma i prezzi dei pagamenti raggruppandoli per status
+
+10. SELECT SUM(`price`) AS 'sum', `status` FROM `pagamenti`
+GROUP BY (`status`);
+
+
+Conta quante volte è stata prenotata ogni stanza
+
+11. SELECT COUNT(`stanza_id`) AS 'total_bookings', `stanza_id` FROM `prenotazioni`
+GROUP BY (`stanza_id`);
+
+
+Fai una analisi per vedere se ci sono ore in cui le prenotazioni sono più frequenti
+
+12.
